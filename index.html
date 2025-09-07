@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My To-dos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="header-ul">
+          <li class="my-logo"><button type="button">MY To-dos</button></li>
+          <li class="Search-area">
+            <search style="width: 100%; height: 100%"
+              ><form action="" class="Search" autocomplete="on">
+                <input
+                  type="text"
+                  name="Search-text"
+                  id="search-text"
+                  placeholder="Ara..."
+                /><button type="submit" id="search-button">
+                  <i class="bi bi-search"></i>
+                </button></form
+            ></search>
+          </li>
+          <li class="right-side">
+            <div class="question">
+              <a href="question.html"><i class="bi bi-question"></i></a>
+            </div>
+            <div class="theme-color">
+              <i class="bi bi-moon-fill"></i>
+              <div class="ball"></div>
+              <i class="bi bi-sun-fill"></i>
+            </div>
+            <div class="avatar">
+              <img src="avatars/male.png" alt="" />
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content">
+      <div class="content-wrapper">
+        <form class="input-text-area" autocomplete="off">
+          <div id="categories">
+            <select  id="to-do-categories">
+              <option value="" disabled selected hidden>
+                Choose Please...
+              </option>
+              <option value="Lesson">Lesson</option>
+              <option value="Work">Work</option>
+              <option value="Personal">Personal</option>
+              <option value="Entertainment">Entertainment</option>
+            </select>
+          </div>
+          <input
+            type="text"
+            name="text"
+            id="input-text"
+            placeholder="Add todo..."
+          /><button type="submit" id="adder">
+            <i class="bi bi-plus-circle-fill"></i>
+          </button>
+        </form>
+
+        <form action="" id="categorie-chooser">
+          <select name="" id="categorie-select">
+            <option value="" disabled selected hidden>Choose Please...</option>
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="uncompleted">Uncompleted</option>
+            <option value="Lesson">Lesson</option>
+            <option value="Work">Work</option>
+            <option value="Personal">Personal</option>
+            <option value="Entertainment">Entertainment</option>
+          </select>
+        </form>
+        <div class="content-list-wrapper">
+          <ul class="content-list">
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

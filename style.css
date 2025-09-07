@@ -1,0 +1,401 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+html{
+    font-size: 62.5%;
+}
+:root{
+    --yellow:rgb(255, 200, 59);
+    --dash-width:3rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body{
+    height: calc(100vh - 5rem);
+}
+ul{
+    list-style-type: none;
+}
+
+
+/* ! Header Start */
+
+
+header{
+    width: 100%;
+    height: 5rem;
+    background-image:linear-gradient(to right,rgba(42, 123, 155, 1), rgba(237, 221, 83, 1));
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+}
+
+.header-ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+
+}
+
+
+
+
+.my-logo > button{
+    font-size: 3rem;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    
+}
+.Search-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40rem;
+    height: 3rem;
+    margin-top: 0.5rem;
+}
+
+.Search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+}
+.Search > input{
+    width: calc(100% - 3rem);
+    height: 100%;
+    outline: none;
+    border: none;
+    padding-left:1rem ;
+    font-size: 2rem;
+    background-color: var(--yellow);
+    color: white;
+    padding-right:1rem ;
+    border-radius: 10px;
+    border-bottom-right-radius:0 ;
+    border-top-right-radius:0 ;
+    border-right: 1px solid gray;
+}
+.Search>input::placeholder{
+    color: white;
+}
+.Search > button{
+    height: 100%;
+    width: 3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--yellow);
+    color: white;
+    font-size: 2rem;
+
+    
+}
+
+
+.right-side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.question{
+width: 3rem;
+height: 3rem;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 3rem;
+}
+.question > a > i{
+color: white;
+border: 1px solid black;
+}
+
+.theme-color{
+    position: relative;
+    width: 5rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+.ball{
+    position: absolute;
+    left: 0.3rem;
+    top: 0.3rem;
+    background-color: black;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+/* .ball:hover{
+    left: 2.3rem;
+
+} */
+
+
+.avatar img{
+    width: 3rem;
+    margin-top: 0.5rem;
+    height: 3rem;
+    object-fit: cover;
+    border: 1px solid gray;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: white;
+}
+
+
+
+/* ! Header End */
+
+
+
+/* !content start*/
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+.content-wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10rem;
+    gap: 1rem;
+    width: 50%;
+    height: 100%;
+
+}
+
+#categories{
+    width: 20rem;
+    height: 5rem;
+}
+#categories > #to-do-categories{
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    background-color: var(--yellow);
+    color: black;
+    border: none;
+    border-right: solid 1px wheat;
+    outline: none;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+
+
+
+
+.input-text-area{
+    display: flex;
+}
+
+#input-text{
+    width: 50rem;
+    height: 5rem;
+    border: none;
+    color: black;
+    padding: 1rem;
+    font-size: 2rem;
+    background-color: var(--yellow);
+    outline: none;
+}
+#input-text:focus{
+border: 2px solid blueviolet;
+
+}
+.input-text-area>#input-text::placeholder{
+    color:black;
+}
+#adder{
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    height: 5rem;
+    width: 5rem;
+    border: none;
+    outline: none;
+    font-size: 3rem;
+    background-color: rgb(71, 171, 24);
+    border-left: 1px solid wheat;
+    color:white;
+    cursor: pointer;
+}
+
+
+#categorie-chooser > #categorie-select{
+    margin:2rem;
+    width: 15rem;
+    height: 5rem;
+    padding: 0.5rem;
+    font-size: 1.7rem;
+    background-color: var(--yellow);
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.content-list-wrapper{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 50rem;
+    margin-top: 2rem;
+
+}
+
+
+.content-list{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    font-size: 3rem;
+    background-color: green;
+    padding: 1rem;
+}
+.content-list::-webkit-scrollbar{
+    background:transparent;
+    width: 0px;
+}
+
+.content-list {
+    scrollbar-width: none;
+}
+
+
+.list-item{
+    width:100%;
+    
+}
+.to-do-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: black;
+    width: 100%;
+    height: 6rem;
+    padding: 1rem;
+}
+.to-do-item > .start{
+display: flex;
+justify-content: flex-start;
+
+width: calc(100% - var(--dash-width));
+gap: 1rem;
+padding: 1rem;
+}
+
+.to-do-item > .start > div {
+   
+    width: calc(1rem + var(--dash-width));
+    height: calc(1rem + var(--dash-width));
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.to-do-item > .start > div > button >i{
+    color: white;
+}
+
+.check-button{
+    width: var(--dash-width);
+    height: var(--dash-width);
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    
+}
+
+.to-do-item > .start > .item-type{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(1rem + --dash-width);
+    width: 20rem;
+    border: 1px solid white;
+    background-color: var(--yellow);
+    color: black;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.to-do-item > .start > .item-name{
+    display: flex;
+    align-items: center;
+    width: 60rem;
+    border: 1px solid white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: var(--yellow);
+}
+
+.delete-button-div{
+    background-color: black;
+    width: calc(1rem + var(--dash-width));
+    height: calc(1rem + var(--dash-width));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-button-div > .delete-button{
+    border: none;
+    outline: none;
+    width: var(--dash-width);
+    height: var(--dash-width);
+    font-size: 2.5rem;
+    background-color:transparent;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+/*! content end*/

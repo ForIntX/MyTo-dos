@@ -1,0 +1,88 @@
+
+<!-- this is not project file, this is test file-->
+
+    const listItem = document.createElement("li");
+        listItem.className = "list-item";
+        listItem.innerHTML = `<div class="to-do-item">
+                    <div class="start">
+                    <div>
+                        <button type="button" class="check-button">
+                        <i class="bi bi-check-circle-fill"></i>
+                        </button>
+                    </div>
+                    <span class="item-type"></span>
+                    <span class="item-name"></span>
+                    </div>
+                    <div class="delete-button-div">
+                    <button type="button" class="delete-button">
+                        <i class="bi bi-dash-circle-fill"></i>
+                    </button>
+                    </div>
+                </div>`;
+        contentList.appendChild(listItem);
+        const itemTypesList = document.querySelectorAll(".item-type");
+        const itemType = itemTypesList[itemTypesList.length - 1];
+        itemType.textContent = categorieVal;
+
+        const itemNameList = document.querySelectorAll(".item-name");
+        const itemName = itemNameList[itemNameList.length - 1];
+        itemName.textContent = inputText.value;
+
+        const checkMarkList = document.querySelectorAll(".check-button");
+        const checkMark = checkMarkList[checkMarkList.length - 1];
+
+        const deleteButtonList = document.querySelectorAll(".delete-button");
+        const deleteButton = deleteButtonList[deleteButtonList.length - 1];
+
+
+
+
+        inputText.value="";
+        
+        checkMark.addEventListener("click", function (e) {
+        e.preventDefault();
+        if(itemName.style.textDecoration=="line-through"){
+
+        itemName.style.textDecoration="none";
+        }
+        else{
+            itemName.style.textDecoration="line-through";
+        }
+
+        if (itemType.style.textDecoration=="line-through") {
+            itemType.style.textDecoration="none"
+        } 
+        else{
+            itemType.style.textDecoration="line-through"
+        }
+
+        });
+
+        deleteButton.addEventListener("click",function (e) {
+        e.preventDefault();
+        listItem.remove();
+        
+        
+        });
+
+
+<li class="list-item">
+            <div class="to-do-item">
+            <div class="start">
+                <div>
+                <button type="button" class="check-button">
+                    <i class="bi bi-check-circle-fill"></i>
+                </button>
+                </div>
+                <span class="item-type">Entertainment</span>
+                
+                    <span class="item-name">test test test test test</span>
+                
+            </div>
+            <div class="delete-button-div">
+                <button type="button" class="delete-button">
+                <i class="bi bi-dash-circle-fill"></i>
+                </button>
+            </div>
+            </div>
+        </li>
